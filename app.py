@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 app.debug = True
@@ -6,7 +6,7 @@ app.debug = True
 
 @app.route('/')
 def hello_world():
-    return 'Hello 王木木!'
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
